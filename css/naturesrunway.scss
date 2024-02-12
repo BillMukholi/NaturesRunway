@@ -1,0 +1,243 @@
+
+.product-area-cont{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    .product-area-one-cont{
+        position: relative;
+        width: calc(60%);
+        height: 20cm;
+        //background: gray;
+        // border: 1px solid black;
+    }
+    .product-area-two-cont{
+        position: sticky;
+        top: 0px;
+        width: calc(40%);
+        height: 45cm;
+        border: 1px solid black;
+        .product-area-info-cont{
+            position: relative;
+            width: 75%;
+            margin: auto;
+            margin-top: 2cm;
+            .info-component-breadcrumb{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 2cm;
+                .woocommerce-breadcrumb{
+                    position: relative;
+                    width: 90%;
+                    a{
+                        font-family: "Inter";
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 300;
+                        font-size: 0.8em;
+                    }
+                }
+                .product-area-info-logo{
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    width: 2cm;
+                    .product-area-info-logo-img{
+                        position: absolute;
+                        width: 100px;
+                        top: -15%;
+                    }
+                }
+            }
+            .info-component-product-name{
+                position: relative;
+                .info-component-product-name-text{
+                    text-transform: uppercase;
+                    font-family: 'Akira Expanded', sans-serif;
+                    color: black;
+                    font-weight: 900;
+                    font-size: 3em;
+                    padding: unset;
+                    margin: unset;
+                    line-height: 1.1em;
+                }
+            }
+
+            .info-component-product-price{
+                position: relative;
+                display: flex;
+                border-radius: 10px;
+                background: #FFF6F4;
+                height: 1.5cm;
+                width: 100%;
+                padding: 0 30px;
+                margin-top: 0.75cm;
+                align-items: center;
+                p{
+                    font-size: 1.15em;
+                    font-family: 'Inter';
+                    margin: unset;
+                    padding: unset;
+                }
+                .info-component-product-price-regular{
+                    text-decoration: line-through;
+                    font-weight: 300;
+                }
+                .info-component-product-price-sale{
+                    margin-left: 10px;
+                    color: #FF5724;
+                    font-weight: 800;
+                }
+            }
+
+            .info-component-product-form{
+                position: relative;
+                .entry-title{
+                    display: none;
+                }
+                .price{
+                    display: none;
+                }
+                .woocommerce-product-details__short-description{
+                    display: none;
+                }
+                .woocommerce-product-rating{
+                    display: none;
+                }
+                .product_meta{
+                    display: none;
+                }
+                form{
+                    table{
+                        tbody{
+                            tr{
+                                display: flex;
+                                flex-direction: column;
+                                th{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    width: 100%;
+                                    margin-top: 1cm;
+                                    label{
+                                        font-family: 'Akira Expanded';
+                                        text-align: left;
+                                        width: 100%;
+                                    }
+                                }
+                                td{
+                                    position: relative;
+                                    width: 100%;
+                                    select{
+                                        width: 100%;
+                                        height: 1.5cm;
+                                        border-radius: 10px;
+                                        padding: 0px 5px;
+                                        border: 1px solid black;
+                                    }
+
+                                    .reset_variations{
+                                        display: block;
+                                        color: gray;
+                                        text-decoration: none;
+                                        margin-top: 0.5cm;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .woocommerce-variation{
+                        //display: none !important;
+                    }
+                    .wc-deposits-wrapper{
+                        position: relative;
+                        ul{
+                            position: relative;
+                            li{
+                                //border: 1px solid black;
+                                border-radius: 10px;
+                                height: 1.5cm;
+                            }
+                        }
+                        .wc-deposits-payment-description{
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    .woocommerce-variation-add-to-cart{
+                        position: relative;
+                        margin-top: 1cm;
+                        .quantity{
+                            input{
+                                position: relative;
+                                width: 100%;
+                                height: 1.5cm;
+                                border-radius: 10px;
+                                border: 1px solid black;
+                            }
+                        }
+                        button{
+                            width: 100%;
+                            height: 1.5cm;
+                            border-radius: 10px;
+                            margin-top: 20px;
+                            text-transform: uppercase;
+                            letter-spacing: 4px;
+                            background: #FF5724;
+                            color: white;
+                        }
+                        .wl-button-wrap{
+                            .wl-already-in{
+                                width: 100%;
+                                position: relative;
+                                text-align: center;
+                                ul{
+                                    position: relative;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    list-style-type: none;
+                                    padding: unset;
+                                    margin: unset;
+                                    li{
+                                        position: relative;
+                                        display: block;
+                                        a{
+                                            text-decoration: none;
+                                            color: #FF5724;
+                                        }
+                                    }
+                                }
+                            }
+                            .wl-add-to{
+                                text-decoration: none;
+                                border-radius: 10px;
+                                background: rgb(198, 198, 198);
+                                color: black;
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-content: center;
+                                width: 100%;
+                                height: 1.5cm;
+                                text-align: center;
+                                padding-top: 0.35cm;
+                                text-transform: uppercase;
+                                letter-spacing: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+            .info-component-product-additional-info{
+                position: relative;
+                .woocommerce-tabs{
+                    display: none;
+                }
+            }
+        }
+    }
+}
