@@ -2,32 +2,141 @@
 .product-area-cont{
     position: relative;
     display: flex;
-    width: 100%;
     height: auto;
+    @media(min-width:0px){
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    @media(min-width:319px){
+    }
+    @media(min-width:374px){
+    }
+    @media(min-width:424px){
+    }
+    @media(min-width:767px){
+    }
+    @media(min-width:1023px){
+        display: flex;
+    }
+    @media(min-width:1439px){
+        
+    }
+    @media(min-width:1919px){
+        width: 1920px;
+        background: pink;
+    }
     .product-area-one-cont{
         position: relative;
-        width: calc(60%);
-        height: 20cm;
+        height: auto;
         //background: gray;
         // border: 1px solid black;
+        padding-left: 0.5vw;
+        @media(min-width:0px){
+            position: relative;
+            width: 100%;
+            height: 10cm;
+            background: yellow;
+        }
+        @media(min-width:319px){
+        }
+        @media(min-width:374px){
+        }
+        @media(min-width:424px){
+        }
+        @media(min-width:767px){
+        }
+        @media(min-width:1023px){
+            width: 60%;
+            height: auto;
+            background: unset;
+        }
+        @media(min-width:1439px){
+            
+        }
+        .product-area-grid-cont{
+            position: relative;
+            width: 100%;
+            .product-area-grid{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                @media(min-width:0px){
+                    display: none;
+                }
+                .product-area-grid-item-cont{
+                    position: relative;
+                    width: 50%;
+                    overflow: hidden;
+                    // @media(min-width:0px){
+
+                    // }
+                    // @media(min-width:319px){
+                    // }
+                    // @media(min-width:374px){
+                    // }
+                    // @media(min-width:424px){
+                    // }
+                    @media(min-width:767px){
+                        height: 8cm;
+                    }
+                    @media(min-width:1023px){
+                        height: 10cm;
+                    }
+                    @media(min-width:1439px){
+                        height: 15cm;
+                    }
+                    .product-area-grid-item-img{
+                        position: relative;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
     }
     .product-area-two-cont{
         position: sticky;
         top: 0px;
-        width: calc(40%);
-        height: 45cm;
-        border: 1px solid black;
+        width: 100%;
+        //border: 1px solid black;
+        padding: 0 5vw;
+        @media(min-width:0px){
+            position: relative;
+        }
+        @media(min-width:319px){
+        }
+        @media(min-width:374px){
+        }
+        @media(min-width:424px){
+        }
+        @media(min-width:767px){
+        }
+        @media(min-width:1023px){
+            position: sticky;
+            width: 40%;
+        }
+        @media(min-width:1439px){
+            
+        }
         .product-area-info-cont{
             position: relative;
-            width: 75%;
+            width: 100%;
             margin: auto;
             margin-top: 2cm;
+            padding-bottom: 1cm;
             .info-component-breadcrumb{
                 position: relative;
                 display: flex;
                 flex-direction: row;
                 width: 100%;
                 height: 2cm;
+                @media(min-width:0px){
+                    display: none;
+                }
+                @media(min-width:1023px){
+                    display: flex;
+                }
                 .woocommerce-breadcrumb{
                     position: relative;
                     width: 90%;
@@ -58,10 +167,26 @@
                     font-family: 'Akira Expanded', sans-serif;
                     color: black;
                     font-weight: 900;
-                    font-size: 3em;
                     padding: unset;
                     margin: unset;
-                    line-height: 1.1em;
+                    @media(min-width:0px){
+                        font-size: 1.3em;
+                    }
+                    @media(min-width:319px){
+                    }
+                    @media(min-width:374px){
+                    }
+                    @media(min-width:424px){
+                    }
+                    @media(min-width:767px){
+                    }
+                    @media(min-width:1023px){
+                        font-size: 3em;
+                        line-height: 1.1em;
+                    }
+                    @media(min-width:1439px){
+                        
+                    }
                 }
             }
 

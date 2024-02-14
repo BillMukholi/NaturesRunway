@@ -1,26 +1,109 @@
 .product-area-cont {
   position: relative;
   display: flex;
-  width: 100%;
   height: auto;
+}
+@media (min-width: 0px) {
+  .product-area-cont {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+@media (min-width: 1023px) {
+  .product-area-cont {
+    display: flex;
+  }
+}
+@media (min-width: 1919px) {
+  .product-area-cont {
+    width: 1920px;
+    background: pink;
+  }
 }
 .product-area-cont .product-area-one-cont {
   position: relative;
-  width: 60%;
-  height: 20cm;
+  height: auto;
+  padding-left: 0.5vw;
+}
+@media (min-width: 0px) {
+  .product-area-cont .product-area-one-cont {
+    position: relative;
+    width: 100%;
+    height: 10cm;
+    background: yellow;
+  }
+}
+@media (min-width: 1023px) {
+  .product-area-cont .product-area-one-cont {
+    width: 60%;
+    height: auto;
+    background: unset;
+  }
+}
+.product-area-cont .product-area-one-cont .product-area-grid-cont {
+  position: relative;
+  width: 100%;
+}
+.product-area-cont .product-area-one-cont .product-area-grid-cont .product-area-grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 0px) {
+  .product-area-cont .product-area-one-cont .product-area-grid-cont .product-area-grid {
+    display: none;
+  }
+}
+.product-area-cont .product-area-one-cont .product-area-grid-cont .product-area-grid .product-area-grid-item-cont {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+@media (min-width: 767px) {
+  .product-area-cont .product-area-one-cont .product-area-grid-cont .product-area-grid .product-area-grid-item-cont {
+    height: 8cm;
+  }
+}
+@media (min-width: 1023px) {
+  .product-area-cont .product-area-one-cont .product-area-grid-cont .product-area-grid .product-area-grid-item-cont {
+    height: 10cm;
+  }
+}
+@media (min-width: 1439px) {
+  .product-area-cont .product-area-one-cont .product-area-grid-cont .product-area-grid .product-area-grid-item-cont {
+    height: 15cm;
+  }
+}
+.product-area-cont .product-area-one-cont .product-area-grid-cont .product-area-grid .product-area-grid-item-cont .product-area-grid-item-img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .product-area-cont .product-area-two-cont {
   position: sticky;
   top: 0px;
-  width: 40%;
-  height: 45cm;
-  border: 1px solid black;
+  width: 100%;
+  padding: 0 5vw;
+}
+@media (min-width: 0px) {
+  .product-area-cont .product-area-two-cont {
+    position: relative;
+  }
+}
+@media (min-width: 1023px) {
+  .product-area-cont .product-area-two-cont {
+    position: sticky;
+    width: 40%;
+  }
 }
 .product-area-cont .product-area-two-cont .product-area-info-cont {
   position: relative;
-  width: 75%;
+  width: 100%;
   margin: auto;
   margin-top: 2cm;
+  padding-bottom: 1cm;
 }
 .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-breadcrumb {
   position: relative;
@@ -28,6 +111,16 @@
   flex-direction: row;
   width: 100%;
   height: 2cm;
+}
+@media (min-width: 0px) {
+  .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-breadcrumb {
+    display: none;
+  }
+}
+@media (min-width: 1023px) {
+  .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-breadcrumb {
+    display: flex;
+  }
 }
 .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-breadcrumb .woocommerce-breadcrumb {
   position: relative;
@@ -59,10 +152,19 @@
   font-family: "Akira Expanded", sans-serif;
   color: black;
   font-weight: 900;
-  font-size: 3em;
   padding: unset;
   margin: unset;
-  line-height: 1.1em;
+}
+@media (min-width: 0px) {
+  .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-product-name .info-component-product-name-text {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 1023px) {
+  .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-product-name .info-component-product-name-text {
+    font-size: 3em;
+    line-height: 1.1em;
+  }
 }
 .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-product-price {
   position: relative;

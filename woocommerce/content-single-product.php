@@ -60,8 +60,7 @@ if ( post_password_required() ) {
 					$variation_obj = wc_get_product($variation['variation_id']);
 
 					// Get the variation image URL
-					$variation_image_url = wp_get_attachment_image_url($variation['image_id']);
-
+					$variation_image_url = wp_get_attachment_image_src($variation['image_id'], 'full');
 
 					// Get the variation data
 					$variation_data = array(
@@ -72,7 +71,7 @@ if ( post_password_required() ) {
 						'sale_price' => $variation_obj->get_sale_price(),
 						'stock_status' => $variation_obj->get_stock_status(),
 						'description' => $variation_obj->get_description(),
-						'image_url' => $variation_image_url,
+						'image_url' => $variation_image_url[0],
 
 					);
 
@@ -102,7 +101,8 @@ if ( post_password_required() ) {
 				$js_code = '<script>var variationData = ' . json_encode($data) . ';</script>';
 
 				// Print the HTML data and JS code
-				echo $html_data . $js_code;
+				// echo $html_data . $js_code;
+				echo $js_code;
 			} else {
 				echo 'No variations available for the product.';
 			}
@@ -111,7 +111,33 @@ if ( post_password_required() ) {
 	?>
 
 	<div class="product-area-cont">
-		<div class="product-area-one-cont"></div>
+		<div class="product-area-one-cont">
+			<div class="product-area-grid-cont">
+				<div class="product-area-grid">
+				<?php
+					// Get the product object
+					$product = wc_get_product( $product_id );
+
+					//get product image
+					$image_id = get_post_thumbnail_id( $product_id );
+					$image_url = wp_get_attachment_url( $image_id );
+					echo '<div class="product-area-grid-item-cont">';
+						echo '<img id="variationImg" class="product-area-grid-item-img" src="'.$image_url.'" />';
+					echo '</div>';
+
+					// Get the product gallery image IDs
+					$gallery_image_ids = $product->get_gallery_image_ids();
+					// Loop through the gallery image IDs and output the URLs
+					foreach ( $gallery_image_ids as $gallery_image_id ) {
+						$gallery_image_url = wp_get_attachment_url( $gallery_image_id );
+						echo '<div class="product-area-grid-item-cont">';
+							echo '<img class="product-area-grid-item-img" src="'.$gallery_image_url.'" />';
+						echo '</div>';
+					}
+				?>
+				</div>
+			</div>
+		</div>
 		<div class="product-area-two-cont">
 			<div class="product-area-info-cont">
 				<div class="product-area-info-component info-component-breadcrumb">
@@ -180,7 +206,7 @@ if ( post_password_required() ) {
 	 * @hooked woocommerce_upsell_display - 15
 	 * @hooked woocommerce_output_related_products - 20
 	 */
-	do_action( 'woocommerce_after_single_product_summary' );
+	do_action( 'woocommerce_after_single_product_summaryx' );
 	?>
 </div>
 
